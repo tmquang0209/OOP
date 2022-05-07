@@ -70,12 +70,26 @@ Inventory::~Inventory()
 
 int main()
 {
+    int size, itemNum, qlt;
+    double cost;
+    cout << "Nhap so luong: ";
+    cin >> size;
+    Inventory *inv = new Inventory[size];
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Nhap thong tin hang hoa thu " << i + 1 << ": " << endl;
+        cout << "Nhap ma hang: ";
+        cin >> itemNum;
+        cout << "Nhap so luong: ";
+        cin >> qlt;
+        cout << "Nhap gia: ";
+        cin >> cost;
+        inv[i] = Inventory(itemNum, qlt, cost);
+    }
     cout << "ID\tQuantity\tCost\tTotal Cost" << endl;
-    Inventory inv1(1, 2, 3);
-    inv1.output();
-    Inventory inv2(2, 3, 4);
-    inv2.output();
-    Inventory inv3(3, 4, 5);
-    inv3.output();
+    for (int i = 0; i < size; i++)
+    {
+        inv[i].output();
+    }
     return 0;
 }
