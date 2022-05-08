@@ -68,22 +68,41 @@ Inventory::~Inventory()
 {
 }
 
+int inputValue(int value)
+{
+    while (!(cin >> value) || value < 0)
+    {
+        cout << "Vui long nhap so > 0. Nhap lai: ";
+    }
+    return value;
+}
+
+double inputValue(double value)
+{
+    while (!(cin >> value) || value < 0)
+    {
+        cout << "Vui long nhap so > 0. Nhap lai: ";
+    }
+    return value;
+}
+
 int main()
 {
     int size, itemNum, qlt;
     double cost;
     cout << "Nhap so luong: ";
-    cin >> size;
+    size = inputValue(size);
+
     Inventory *inv = new Inventory[size];
     for (int i = 0; i < size; i++)
     {
         cout << "Nhap thong tin hang hoa thu " << i + 1 << ": " << endl;
         cout << "Nhap ma hang: ";
-        cin >> itemNum;
+        itemNum = inputValue(itemNum);
         cout << "Nhap so luong: ";
-        cin >> qlt;
+        qlt = inputValue(qlt);
         cout << "Nhap gia: ";
-        cin >> cost;
+        cost = inputValue(cost);
         inv[i] = Inventory(itemNum, qlt, cost);
     }
     cout << "ID\tQuantity\tCost\tTotal Cost" << endl;
