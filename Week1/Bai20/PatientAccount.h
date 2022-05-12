@@ -6,11 +6,12 @@ Mục đích:
 Create by: TMQ
 Create date: 08/05/2022
 */
-#include "Surgery.h"
-#include "Pharmacy.h"
-
 #ifndef PATIENTACCOUNT_H
 #define PATIENTACCOUNT_H
+#include "Pharmacy.h"
+#include "Pharmacy.cpp"
+#include "Surgery.h"
+#include "Surgery.cpp"
 
 class PatientAccount
 {
@@ -18,10 +19,23 @@ private:
     int days;
     double charge;
     double rate;
-    Surgery sergery;
+    Surgery surgery;
     Pharmacy pharmacy;
 
 public:
     PatientAccount();
+    PatientAccount(int, double, double);
+    void setDays(int);
+    void setCharge(double);
+    void setRate(double);
+    void setSurgeryCharges(int);
+    void setPharmacyCharges(int);
+
+    int getDays();
+    double getCharge();
+    double getRate();
+    double getCost();
+
+    ~PatientAccount();
 };
 #endif
