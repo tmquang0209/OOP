@@ -16,7 +16,7 @@ public:
     int getDay() const;
     string getMonth() const;
     void display();
-    void getDayMonth() const;
+    //    void getDayMonth() const;
     int getDayLimit() const;
     ~DayOfYear();
 };
