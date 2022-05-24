@@ -48,6 +48,24 @@ bool Temperature::isWaterBoiling()
     return (temperature >= 212);
 }
 
+void Temperature::display()
+{
+    if (isEthylFreezing())
+        cout << "Ethyl dong bang" << endl;
+    else if (isEthylBoiling())
+        cout << "Ethyl soi" << endl;
+
+    if (isOxygenFreezing())
+        cout << "Oxygen dong bang" << endl;
+    else if (isOxygenBoiling())
+        cout << "Oxygen soi" << endl;
+
+    if (isWaterFreezing())
+        cout << "Water dong bang" << endl;
+    else if (isWaterBoiling())
+        cout << "Water soi" << endl;
+}
+
 Temperature::~Temperature()
 {
 }
@@ -62,31 +80,33 @@ int main()
 
     cout << "Nhiet do: " << t.getTemperature() << endl;
 
-    if (t.isEthylFreezing())
-    {
-        cout << "Ethyl dong bang" << endl;
-    }
-    else if (t.isEthylBoiling())
-    {
-        cout << "Ethyl soi" << endl;
-    }
+    t.display();
 
-    if (t.isOxygenFreezing())
-    {
-        cout << "Oxygen dong bang" << endl;
-    }
-    else if (t.isOxygenBoiling())
-    {
-        cout << "Oxygen soi" << endl;
-    }
+    // if (t.isEthylFreezing())
+    // {
+    //     cout << "Ethyl dong bang" << endl;
+    // }
+    // else if (t.isEthylBoiling())
+    // {
+    //     cout << "Ethyl soi" << endl;
+    // }
 
-    if (t.isWaterFreezing())
-    {
-        cout << "Water dong bang" << endl;
-    }
-    else if (t.isWaterBoiling())
-    {
-        cout << "Water soi" << endl;
-    }
+    // if (t.isOxygenFreezing())
+    // {
+    //     cout << "Oxygen dong bang" << endl;
+    // }
+    // else if (t.isOxygenBoiling())
+    // {
+    //     cout << "Oxygen soi" << endl;
+    // }
+
+    // if (t.isWaterFreezing())
+    // {
+    //     cout << "Water dong bang" << endl;
+    // }
+    // else if (t.isWaterBoiling())
+    // {
+    //     cout << "Water soi" << endl;
+    // }
     return 0;
 }

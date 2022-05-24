@@ -14,6 +14,7 @@ public:
     bool isOxygenBoiling();
     bool isWaterFreezing();
     bool isWaterBoiling();
+    void display();
     ~Temperature();
 };
 #endif

@@ -88,31 +88,27 @@ double inputValue(double value)
 
 int main()
 {
-    Inventory inv1(1, 6.95, 12);
-    Inventory inv2(2, 6.95, 12);
-    Inventory inv3(3, 6.95, 12);
+    int size, itemNum, qlt;
+    double cost;
+    cout << "Nhap so luong: ";
+    size = inputValue(size);
 
-    // int size, itemNum, qlt;
-    // double cost;
-    // cout << "Nhap so luong: ";
-    // size = inputValue(size);
-
-    // Inventory *inv = new Inventory[size];
-    // for (int i = 0; i < size; i++)
-    // {
-    //     cout << "Nhap thong tin hang hoa thu " << i + 1 << ": " << endl;
-    //     cout << "Nhap ma hang: ";
-    //     itemNum = inputValue(itemNum);
-    //     cout << "Nhap so luong: ";
-    //     qlt = inputValue(qlt);
-    //     cout << "Nhap gia: ";
-    //     cost = inputValue(cost);
-    //     inv[i] = Inventory(itemNum, qlt, cost);
-    // }
-    // cout << "ID\tQuantity\tCost\tTotal Cost" << endl;
-    // for (int i = 0; i < size; i++)
-    // {
-    //     inv[i].output();
-    // }
+    Inventory *inv = new Inventory[size];
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Nhap thong tin hang hoa thu " << i + 1 << ": " << endl;
+        cout << "Nhap ma hang: ";
+        itemNum = inputValue(itemNum);
+        cout << "Nhap so luong: ";
+        qlt = inputValue(qlt);
+        cout << "Nhap gia: ";
+        cost = inputValue(cost);
+        inv[i] = Inventory(itemNum, qlt, cost);
+    }
+    cout << "ID\tQuantity\tCost\tTotal Cost" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        inv[i].output();
+    }
     return 0;
 }

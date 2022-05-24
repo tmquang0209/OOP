@@ -1,38 +1,27 @@
 #include <iostream>
-#include <string.h>
+#include <string>
 #include "numbers.h"
 
 using namespace std;
 
-Numbers::Numbers()
-{
-    this->number = 0;
-}
+string Numbers::lessThan20[] = {"zero", "one", "two", "three", "four", "five",
+                                "six", "seven", "eight", "nine", "ten", "eleven",
+                                "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+                                "seventeen", "eighteen", "nineteen"};
+string Numbers::tens[] = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "nighty"};
+string Numbers::hundred = "hundred";
+string Numbers::thousand = "thousand";
 
 Numbers::Numbers(int number)
 {
-    this->number = number;
-}
-
-void Numbers::setNumber(int number)
-{
-    this->number = number;
-}
-
-int Numbers::getNumber() const
-{
-    return this->number;
+    if (number < 0 || number > 9999)
+        cout << "Invalid number!" << endl;
+    else
+        this->number = number;
 }
 
 void Numbers::print()
 {
-    string lessThan20[20] = {"zero", "one", "two", "three", "four", "five",
-                             "six", "seven", "eight", "nine", "ten", "eleven",
-                             "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-                             "seventeen", "eighteen", "nineteen"};
-    string tens[8] = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "nighty"};
-    string hundred = "hundred";
-    string thousand = "thousand";
     if (number >= 1000)
     {
         cout << lessThan20[number / 1000] << " " << thousand << " ";

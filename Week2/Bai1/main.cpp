@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    Numbers number(220);
+    Numbers number(111);
     number.print();
     return 0;
 }
