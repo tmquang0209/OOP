@@ -35,49 +35,134 @@ string DayOfYear::getMonth() const
     return month;
 }
 
+DayOfYear DayOfYear::operator++(int)
+{
+    day += 1;
+    return *this;
+}
+
+DayOfYear DayOfYear::operator++()
+{
+    day += 1;
+    return *this;
+}
+
+DayOfYear DayOfYear::operator--(int)
+{
+    day -= 1;
+    return *this;
+}
+
+DayOfYear DayOfYear::operator--()
+{
+    day -= 1;
+    return *this;
+}
+
 void DayOfYear::display()
 {
+    string newMonth;
+    int newDay;
     int dayLimit = getDayLimit();
-    if (day < 0 || day > dayLimit)
-        cout << "Ngay khong hop le" << endl;
+    if (day == dayLimit + 1)
+    {
+        if (month == "January")
+            newMonth = "February";
+        else if (month == "February")
+            newMonth = "March";
+        else if (month == "March")
+            newMonth = "April";
+        else if (month == "April")
+            newMonth = "May";
+        else if (month == "May")
+            newMonth = "June";
+        else if (month == "June")
+            newMonth = "July";
+        else if (month == "July")
+            newMonth = "August";
+        else if (month == "August")
+            newMonth = "September";
+        else if (month == "September")
+            newMonth = "October";
+        else if (month == "October")
+            newMonth = "November";
+        else if (month == "November")
+            newMonth = "December";
+        else if (month == "December")
+            newMonth = "January";
+        newDay = 1;
+    }
     else
     {
-        day++;
-        if (day == dayLimit + 1)
+        newDay = day;
+        newMonth = month;
+    }
+    if (day == 0)
+    {
+        if (month == "January")
         {
-            if (month == "January")
-                cout << "February 1";
-            else if (month == "February")
-                cout << "March 1";
-            else if (month == "March")
-                cout << "April 1";
-            else if (month == "April")
-                cout << "May 1";
-            else if (month == "May")
-                cout << "June 1";
-            else if (month == "June")
-                cout << "July 1";
-            else if (month == "July")
-                cout << "August 1";
-            else if (month == "August")
-                cout << "September 1";
-            else if (month == "September")
-                cout << "October 1";
-            else if (month == "October")
-                cout << "November 1";
-            else if (month == "November")
-                cout << "December 1";
-            else if (month == "December")
-                cout << "January 1";
-            else
-                cout << "Ngay khong hop le";
+            newMonth = "December";
+            newDay = 31;
         }
-        else
+        else if (month == "February")
         {
-            cout << month << " " << day << endl;
+            newMonth = "January";
+            newDay = 31;
+        }
+        else if (month == "March")
+        {
+            newMonth = "February";
+            newDay = 28;
+        }
+        else if (month == "April")
+        {
+            newMonth = "March";
+            newDay = 31;
+        }
+        else if (month == "May")
+        {
+            newMonth = "April";
+            newDay = 30;
+        }
+        else if (month == "June")
+        {
+            newMonth = "May";
+            newDay = 31;
+        }
+        else if (month == "July")
+        {
+            newMonth = "June";
+            newDay = 30;
+        }
+        else if (month == "August")
+        {
+            newMonth = "July";
+            newDay = 31;
+        }
+        else if (month == "September")
+        {
+            newMonth = "August";
+            newDay = 30;
+        }
+        else if (month == "October")
+        {
+            newMonth = "September";
+            newDay = 31;
+        }
+        else if (month == "November")
+        {
+            newMonth = "October";
+            newDay = 30;
+        }
+        else if (month == "December")
+        {
+            newMonth = "November";
+            newDay = 31;
         }
     }
+    cout << newDay << " " << newMonth << endl;
 }
+
 
 int DayOfYear::getDayLimit() const
 {
@@ -91,36 +176,6 @@ int DayOfYear::getDayLimit() const
         dayLimit = 28;
     return dayLimit;
 }
-
-// void DayOfYear::getDayMonth() const
-// {
-//     if (day > 0 && day <= 31)
-//         cout << "January " << day;
-//     else if (day <= 59)
-//         cout << "February " << day - 31;
-//     else if (day <= 90)
-//         cout << "March " << day - 59;
-//     else if (day <= 120)
-//         cout << "April " << day - 90;
-//     else if (day <= 151)
-//         cout << "May " << day - 120;
-//     else if (day <= 181)
-//         cout << "June " << day - 151;
-//     else if (day <= 212)
-//         cout << "July " << day - 181;
-//     else if (day <= 243)
-//         cout << "August " << day - 212;
-//     else if (day <= 273)
-//         cout << "September " << day - 243;
-//     else if (day <= 304)
-//         cout << "October " << day - 273;
-//     else if (day <= 334)
-//         cout << "November " << day - 304;
-//     else if (day <= 365)
-//         cout << "December " << day - 334;
-//     else
-//         cout << "Gia tri khong hop le!";
-// }
 
 DayOfYear::~DayOfYear()
 {

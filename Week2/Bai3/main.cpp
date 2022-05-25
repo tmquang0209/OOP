@@ -8,5 +8,6 @@ using namespace std;
 int main()
 {
     DayOfYear day(1, "February");
+    ++day;
     day.display();
 }

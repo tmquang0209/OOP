@@ -51,6 +51,22 @@ int Phanso::getMau()
 {
   return mau;
 }
+
+void Phanso::GCD()
+{
+  int a = tu;
+  int b = mau;
+  while (a != b)
+  {
+    if (a > b)
+      a = a - b;
+    else
+      b = b - a;
+  }
+  tu = tu / a;
+  mau = mau / a;
+}
+
 Phanso Phanso::operator+(Phanso p)
 {
   Phanso temp;
@@ -89,6 +105,7 @@ Phanso Phanso::operator++(int)
   temp.tu = tu;
   temp.mau = mau;
   tu += mau;
+  GCD();
   return temp;
 }
 
@@ -98,5 +115,6 @@ Phanso Phanso::operator--(int)
   temp.tu = tu;
   temp.mau = mau;
   tu -= mau;
+  GCD();
   return temp;
 }

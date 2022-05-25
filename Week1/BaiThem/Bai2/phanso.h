@@ -20,6 +20,7 @@ public:
   void setMau(int m); // Gán giá trị cho mẫu
   int getTu();        // Lấy giá trị của tử
   int getMau();       // Lấy giá trị của mẫu
+  void GCD();
   Phanso operator+(Phanso p);
   Phanso operator-(Phanso p);
   Phanso operator*(Phanso p);
