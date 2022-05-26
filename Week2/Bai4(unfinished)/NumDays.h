@@ -4,21 +4,21 @@ class NumDays
 {
 private:
     int hours;
-    int days;
+    double days;
 
 public:
     NumDays();
     NumDays(int hours);
-    NumDays(int hours, int days);
+    NumDays(int hours, double days);
     void setHours(int hours);
-    void setDays(int days);
+    void setDays(int hours);
     int getHours() const;
-    int getDays() const;
+    double getDays() const;
     NumDays operator+(NumDays other);
     NumDays operator-(NumDays other);
-    NumDays operator++(int);
+    NumDays operator++(int); // Tang so gio
     NumDays operator++();
-    NumDays operator--(int);
+    NumDays operator--(int); // Giam so gio
     NumDays operator--();
     void print();
 };

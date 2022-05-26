@@ -121,42 +121,32 @@ Phanso Phanso::operator--(int)
 
 bool Phanso::operator>(const Phanso &p)
 {
-  if (tu / mau > p.tu / p.mau)
-  {
+  if ((double)tu / mau > (double)p.tu / p.mau)
     return true;
-  }
   return false;
 }
 bool Phanso::operator<(const Phanso &p)
 {
-  if (tu / mau < p.tu / p.mau)
-  {
+  if ((double)tu / mau < (double)p.tu / p.mau)
     return true;
-  }
   return false;
 }
 bool Phanso::operator==(const Phanso &p)
 {
-  if (tu / mau == p.tu / p.mau)
-  {
+  if ((double)tu / mau == (double)p.tu / p.mau)
     return true;
-  }
   return false;
 }
 bool Phanso::operator>=(const Phanso &p)
 {
-  if (tu / mau >= p.tu / p.mau)
-  {
+  if ((double)tu / mau >= (double)p.tu / p.mau)
     return true;
-  }
   return false;
 }
 bool Phanso::operator<=(const Phanso &p)
 {
-  if (tu / mau <= p.tu / p.mau)
-  {
+  if ((double)tu / mau <= (double)p.tu / p.mau)
     return true;
-  }
   return false;
 }
 

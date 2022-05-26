@@ -18,22 +18,22 @@ using namespace std;
 int main()
 {
   Phanso p1(1, 2), p2(3, 4), p3;
-  cin >> p3;
-  cout << p3;
-  // if (p1 > p2)
-  //   cout << "p1 > p2" << endl;
+  // cin >> p3;
+  // cout << p3;
+  if (p1 > p2)
+    cout << "p1 > p2" << endl;
 
-  // if (p1 < p2)
-  //   cout << "p1 < p2" << endl;
+  if (p1 < p2)
+    cout << "p1 < p2" << endl;
 
-  // if (p1 == p2)
-  //   cout << "p1 = p2" << endl;
+  if (p1 == p2)
+    cout << "p1 = p2" << endl;
 
-  // if(p1 <= p2)
-  //   cout << "p1 <= p2" <<endl;
+  if (p1 <= p2)
+    cout << "p1 <= p2" << endl;
 
-  // if(p1 >= p2)
-  //   cout << "p1 >= p2" << endl;
+  if (p1 >= p2)
+    cout << "p1 >= p2" << endl;
   // p3 = p1 / p2;
   // p3++;
   // p3.Print();
