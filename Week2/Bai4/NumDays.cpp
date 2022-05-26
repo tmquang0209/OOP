@@ -14,7 +14,7 @@ NumDays::NumDays()
 NumDays::NumDays(int hours)
 {
     this->hours = hours;
-    days = 0;
+    days = (double)hours / HOURS_PER_DAYS;
 }
 
 NumDays::NumDays(int days, double hours)
@@ -28,9 +28,9 @@ void NumDays::setHours(int hours)
     this->hours = hours;
 }
 
-void NumDays::setDays(int days)
+void NumDays::setDays()
 {
-    days = hours / HOURS_PER_DAYS;
+    days = (double)hours / HOURS_PER_DAYS;
 }
 
 int NumDays::getHours() const
@@ -60,20 +60,20 @@ NumDays NumDays::operator-(NumDays other)
 NumDays NumDays::operator++(int)
 {
     hours++;
-    setDays(hours);
+    setDays();
     return hours;
 }
 
 NumDays NumDays::operator++()
 {
     ++hours;
-    setDays(hours);
+    setDays();
     return hours;
 }
 
 NumDays NumDays::operator--(int)
 {
     hours--;
-    setDays(hours);
+    setDays();
     return hours;
 }

@@ -11,7 +11,7 @@ public:
     NumDays(int hours);
     NumDays(int hours, double days);
     void setHours(int hours);
-    void setDays(int hours);
+    void setDays();
     int getHours() const;
     double getDays() const;
     NumDays operator+(NumDays other);
