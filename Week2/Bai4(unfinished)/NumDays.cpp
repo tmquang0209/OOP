@@ -40,3 +40,7 @@ int NumDays::getDays() const
 {
     return days;
 }
+
+NumDays NumDays::operator+(NumDays other){
+
+}

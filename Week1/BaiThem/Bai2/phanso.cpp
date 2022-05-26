@@ -118,3 +118,71 @@ Phanso Phanso::operator--(int)
   GCD();
   return temp;
 }
+
+bool Phanso::operator>(const Phanso &p)
+{
+  if (tu / mau > p.tu / p.mau)
+  {
+    return true;
+  }
+  return false;
+}
+bool Phanso::operator<(const Phanso &p)
+{
+  if (tu / mau < p.tu / p.mau)
+  {
+    return true;
+  }
+  return false;
+}
+bool Phanso::operator==(const Phanso &p)
+{
+  if (tu / mau == p.tu / p.mau)
+  {
+    return true;
+  }
+  return false;
+}
+bool Phanso::operator>=(const Phanso &p)
+{
+  if (tu / mau >= p.tu / p.mau)
+  {
+    return true;
+  }
+  return false;
+}
+bool Phanso::operator<=(const Phanso &p)
+{
+  if (tu / mau <= p.tu / p.mau)
+  {
+    return true;
+  }
+  return false;
+}
+
+istream &operator>>(istream &is, Phanso &p)
+{
+  cout << "Tu: ";
+  is >> p.tu;
+  cout << "Mau: ";
+  is >> p.mau;
+  return is;
+}
+
+ostream &operator<<(ostream &os, Phanso &p)
+{
+  return os << p.tu << "/" << p.mau << endl;
+}
+
+// void operator>>(istream &is, Phanso &p)
+// {
+//   cout << "Tu: ";
+//   is >> p.tu;
+//   cout << "Mau: ";
+//   is >> p.mau;
+// }
+
+// void operator<<(ostream &os, Phanso p)
+// {
+//   os << p.tu << "/" << p.mau << endl;
+// }

@@ -43,7 +43,7 @@ DayOfYear DayOfYear::operator++(int)
 
 DayOfYear DayOfYear::operator++()
 {
-    day += 1;
+    ++day;
     return *this;
 }
 
@@ -162,7 +162,6 @@ void DayOfYear::display()
     }
     cout << newDay << " " << newMonth << endl;
 }
-
 
 int DayOfYear::getDayLimit() const
 {

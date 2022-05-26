@@ -14,6 +14,12 @@ public:
     void setDays(int days);
     int getHours() const;
     int getDays() const;
+    NumDays operator+(NumDays other);
+    NumDays operator-(NumDays other);
+    NumDays operator++(int);
+    NumDays operator++();
+    NumDays operator--(int);
+    NumDays operator--();
     void print();
 };
 #endif

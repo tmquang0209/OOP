@@ -1,4 +1,5 @@
 // Xây dựng lớp phân số
+using namespace std;
 #ifndef PHANSO_H
 #define PHANSO_H
 class Phanso
@@ -15,7 +16,6 @@ public:
   void Print();             // In ra phân số
   void setTu(int t);        // Gán giá trị cho tử
   void setTu(int t, int m); // Gán giá trị cho tử và cả mẫu.
-  // void setTu(int t1,int m1);
   void setTu(float t, float m);
   void setMau(int m); // Gán giá trị cho mẫu
   int getTu();        // Lấy giá trị của tử
@@ -27,5 +27,12 @@ public:
   Phanso operator/(Phanso p);
   Phanso operator++(int);
   Phanso operator--(int);
+  bool operator>(const Phanso &p);
+  bool operator<(const Phanso &p);
+  bool operator==(const Phanso &p);
+  bool operator>=(const Phanso &p);
+  bool operator<=(const Phanso &p);
+  friend istream &operator>>(istream &is, Phanso &p);
+  friend ostream &operator<<(ostream &os, Phanso &p);
 };
 #endif
