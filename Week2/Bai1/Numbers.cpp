@@ -22,6 +22,7 @@ Numbers::Numbers(int number)
 
 void Numbers::print()
 {
+    int newNumber = number;
     if (number >= 1000)
     {
         cout << lessThan20[number / 1000] << " " << thousand << " ";
@@ -40,7 +41,8 @@ void Numbers::print()
     }
     else
     {
-        cout << lessThan20[number] << " ";
+        if (newNumber % 10 != 0)
+            cout << lessThan20[number] << " ";
     }
 }
 
