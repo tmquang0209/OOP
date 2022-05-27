@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Report.h"
+#include "Report.cpp"
 #include "TimeOff.h"
 #include "TimeOff.cpp"
 #include "NumDays.h"
@@ -8,9 +10,7 @@ using namespace std;
 
 int main()
 {
-    TimeOff t1(1, "Precious Ramotswe", 200, 30, 255, 86, 40, 10);
-    TimeOff t2;
-    // cin >> t2;
-    cout << t1;
-    return 0;
+    Report r1;
+    cin >> r1;
+    cout << r1;
 }

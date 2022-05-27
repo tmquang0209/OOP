@@ -34,12 +34,12 @@ void NumDays::setDays()
     days = (double)hours / HOURS_PER_DAYS;
 }
 
-int NumDays::getHours() const
+int NumDays::getHours()
 {
     return hours;
 }
 
-double NumDays::getDays() const
+double NumDays::getDays()
 {
     return days;
 }

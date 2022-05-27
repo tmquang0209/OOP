@@ -26,6 +26,7 @@ NumDays::NumDays(int days, double hours)
 void NumDays::setHours(int hours)
 {
     this->hours = hours;
+    setDays();
 }
 
 void NumDays::setDays()
