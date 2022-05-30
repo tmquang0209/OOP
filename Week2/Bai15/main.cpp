@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    Odometer odometer(999999, 15);
+    Odometer odometer(999990, 15);
     cout << "Gallon hien tai:" << odometer.getFuelGauge() << endl;
     for (int i = 1; i <= 15 * 24; i++)
     {
