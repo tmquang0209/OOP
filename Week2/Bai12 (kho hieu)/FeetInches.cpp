@@ -99,7 +99,10 @@ bool FeetInches::operator>=(const FeetInches &right)
 
 istream &operator>>(istream &is, FeetInches &obj)
 {
-    is >> obj.feet >> obj.inches;
+    cout << "Enter feet: ";
+    is >> obj.feet;
+    cout << "Enter inches: ";
+    is >> obj.inches;
     obj.simplify();
     return is;
 }

@@ -6,15 +6,16 @@ class LandTract
 private:
     FeetInches length;
     FeetInches width;
+    friend class FeetInches;
 
 public:
     LandTract();
-    LandTract(double, double);
-    void setLength(double);
-    void setWidth(double);
-    double getLength() const;
-    double getWidth() const;
-    double getArea() const;
+    LandTract(int, int);
+    void setLength(int);
+    void setWidth(int);
+    int getLength();
+    int getWidth();
+    int getArea() const;
     bool operator==(LandTract &);
     friend istream &operator>>(istream &, LandTract &);
     friend ostream &operator<<(ostream &, const LandTract &);

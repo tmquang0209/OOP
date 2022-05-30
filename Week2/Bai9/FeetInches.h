@@ -29,7 +29,7 @@ public:
     }
 
     // Mutator functions
-    void setFeet(int f)
+    void setInches(int f)
     {
         feet = f;
     }
@@ -41,7 +41,7 @@ public:
     }
 
     // Accessor functions14.5 Operator Overloading 851
-    int getFeet() const
+    int getInches() const
     {
         return feet;
     }
