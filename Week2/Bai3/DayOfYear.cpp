@@ -37,8 +37,9 @@ string DayOfYear::getMonth() const
 
 DayOfYear DayOfYear::operator++(int)
 {
-    day += 1;
-    return *this;
+    DayOfYear temp = *this;
+    temp.day = day++;
+    return temp;
 }
 
 DayOfYear DayOfYear::operator++()

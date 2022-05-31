@@ -16,10 +16,10 @@ istream &operator>>(istream &, FeetInches &);
 class FeetInches
 {
 private:
-    int feet;        // To hold a number of feet
-    int inches;      // To hold a number of inches
-    void simplify(); // Defined in FeetInches.cpp
+    int feet;   // To hold a number of feet
+    int inches; // To hold a number of inches
 public:
+    void simplify(); // Defined in FeetInches.cpp
     // Constructor
     FeetInches(int f = 0, int i = 0)
     {
@@ -29,7 +29,7 @@ public:
     }
 
     // Mutator functions
-    void setInches(int f)
+    void setFeet(int f)
     {
         feet = f;
     }
@@ -41,7 +41,7 @@ public:
     }
 
     // Accessor functions 14.5 Operator Overloading 851
-    int getInches() const
+    int getFeet() const
     {
         return feet;
     }

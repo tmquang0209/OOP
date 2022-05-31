@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    DayOfYear day(1, "February");
-    ++day;
-    day.display();
+    DayOfYear day(1, "February"), day2;
+    day2 = day++;
+    day2.display();
 }

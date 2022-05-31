@@ -18,12 +18,12 @@ Month::Month(string name)
 Month::Month(int monthNumber)
 {
     this->monthNumber = monthNumber;
-    convertNumToName();
+    convertNumToName(*this);
 }
 
-void Month::convertNumToName()
+void Month::convertNumToName(Month &obj)
 {
-    switch (monthNumber)
+    switch (obj.monthNumber)
     {
     case 1:
         name = "January";
@@ -118,32 +118,34 @@ int Month::getMonthNumber() const
 
 Month Month::operator++(int)
 {
-    monthNumber++;
-    if (monthNumber == 13)
-        monthNumber = 1;
-    convertNumToName();
-    return *this;
+    Month temp;
+    temp.monthNumber = this->monthNumber++;
+    if (temp.monthNumber == 13)
+        temp.monthNumber = 1;
+    convertNumToName(temp);
+    return temp;
 }
 
 Month Month::operator++()
 {
     ++monthNumber;
-    convertNumToName();
+    convertNumToName(*this);
     return *this;
 }
 
 Month Month::operator--(int)
 {
-    monthNumber--;
-    if (monthNumber == 0)
-        monthNumber = 12;
-    convertNumToName();
-    return *this;
+    Month temp;
+    temp.monthNumber = this->monthNumber--;
+    if (temp.monthNumber == 0)
+        temp.monthNumber = 12;
+    convertNumToName(temp);
+    return temp;
 }
 
 Month Month::operator--()
 {
     --monthNumber;
-    convertNumToName();
+    convertNumToName(*this);
     return *this;
 }

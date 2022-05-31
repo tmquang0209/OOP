@@ -13,7 +13,7 @@ public:
     Month();
     Month(string);
     Month(int);
-    void convertNumToName();
+    void convertNumToName(Month &);
     void convertNameToNum();
     void setName(string);
     string getName() const;
