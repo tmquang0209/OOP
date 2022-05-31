@@ -23,8 +23,8 @@ public:
     bool operator!=(const FeetInches &);
     bool operator>=(const FeetInches &);
     bool operator<=(const FeetInches &);
-    friend ostream &operator<<(ostream &, const FeetInches &);
     friend istream &operator>>(istream &, FeetInches &);
+    friend ostream &operator<<(ostream &, FeetInches &);
 };
 
 #endif

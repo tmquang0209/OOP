@@ -40,7 +40,7 @@ public:
         simplify();
     }
 
-    // Accessor functions14.5 Operator Overloading 851
+    // Accessor functions 14.5 Operator Overloading 851
     int getInches() const
     {
         return feet;

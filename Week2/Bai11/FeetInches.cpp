@@ -110,7 +110,7 @@ bool FeetInches::operator>=(const FeetInches &right)
     return false;
 }
 
-ostream &operator<<(ostream &os, const FeetInches &obj)
+ostream &operator<<(ostream &os, FeetInches &obj)
 {
     os << obj.inches << " feet " << obj.feet << " inches";
     return os;

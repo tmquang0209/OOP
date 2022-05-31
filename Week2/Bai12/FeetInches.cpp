@@ -1,4 +1,5 @@
 // Implementation file for the FeetInches class
+#include <iostream>
 #include <cstdlib> // Needed for abs()
 #include "FeetInches.h"
 
@@ -99,10 +100,7 @@ bool FeetInches::operator>=(const FeetInches &right)
 
 istream &operator>>(istream &is, FeetInches &obj)
 {
-    cout << "Enter feet: ";
-    is >> obj.feet;
-    cout << "Enter inches: ";
-    is >> obj.inches;
+    is >> obj.feet >> obj.inches;
     obj.simplify();
     return is;
 }
