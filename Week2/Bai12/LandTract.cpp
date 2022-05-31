@@ -18,11 +18,21 @@ LandTract::LandTract()
 
 LandTract::LandTract(int length, int width)
 {
-    this->length = FeetInches(length);
-    this->width = FeetInches(width);
+    this->length.setInches(length);
+    this->width.setInches(width);
 }
 
 int LandTract::getLength() const
 {
-    return 0;
+    return length.getInches();
+}
+
+int LandTract::getWidth() const
+{
+    return width.getInches();
+}
+
+int LandTract::getArea()
+{
+    return length.getInches() * width.getInches();
 }

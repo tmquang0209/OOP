@@ -13,5 +13,7 @@ public:
     LandTract();
     LandTract(int, int);
     int getLength() const;
+    int getWidth() const;
+    int getArea();
 };
 #endif
