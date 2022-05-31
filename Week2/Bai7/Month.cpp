@@ -129,6 +129,8 @@ Month Month::operator++(int)
 Month Month::operator++()
 {
     ++monthNumber;
+    if (monthNumber == 13)
+        monthNumber = 1;
     convertNumToName(*this);
     return *this;
 }

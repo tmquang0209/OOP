@@ -155,23 +155,23 @@ Date Date::operator++()
 
 Date Date::operator++(int)
 {
-    day++;
-    if (day > dayOfMonth(month))
+    Date temp = *this;
+    temp.day = this->day++;
+    if (temp.day > dayOfMonth(temp.month))
     {
-        day = 1;
-        month++;
-        if (month > 12)
+        temp.day = 1;
+        temp.month++;
+        if (temp.month > 12)
         {
-            month = 1;
-            year++;
+            temp.month = 1;
+            temp.year++;
         }
     }
-    return *this;
+    return temp;
 }
 
 Date Date::operator--()
 {
-    Date temp = *this;
     --day;
     if (day < 1)
     {
@@ -183,22 +183,24 @@ Date Date::operator--()
             --year;
         }
     }
-    return temp;
+    return *this;
 }
 
 Date Date::operator--(int)
 {
-    day--;
-    if (day < 1)
+    Date temp = *this;
+    temp.day = this->day--;
+    if (temp.day < 1)
     {
-        day = dayOfMonth(month);
-        month--;
-        if (month < 1)
+        temp.day = dayOfMonth(temp.month);
+        temp.month--;
+        if (temp.month < 1)
         {
-            month = 12;
-            year--;
+            temp.month = 12;
+            temp.year--;
         }
     }
+    return temp;
 }
 
 Date Date::operator-(Date &date2)
