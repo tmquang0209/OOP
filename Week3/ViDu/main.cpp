@@ -14,7 +14,7 @@ int main()
     nguoi1.in();
 
     cout << endl;
-    sinhvien sv1("Nguyen Van A", 18, "CNTT", "12345");
+    sinhvien sv1("Nguyen Van A", 18, "TLU", "TT34", "0123456789", "CNTT", "A41603");
     sv1.in();
 
     cout << endl;

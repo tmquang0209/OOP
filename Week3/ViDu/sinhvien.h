@@ -1,8 +1,8 @@
 #ifndef SINHVIEN_H
 #define SINHVIEN_H
-#include "connguoi.h"
+#include "hocsinh.h"
 #include <string>
-class sinhvien : public connguoi
+class sinhvien : public hocsinh
 {
 private:
     string chuyenNganh;
@@ -10,7 +10,7 @@ private:
 
 public:
     sinhvien();
-    sinhvien(string ht, int t, string cn, string msv);
+    sinhvien(string ht, int t, string truong, string lop, string sdt, string cn, string msv);
     void setChuyenNganh(string);
     void setMsv(string);
     string getChuyenNganh() const;

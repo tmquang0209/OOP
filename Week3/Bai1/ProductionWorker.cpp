@@ -6,12 +6,16 @@ ProductionWorker::ProductionWorker() : Employee()
 {
     shift = 0;
     hourlyPayRate = 0;
+    salary = 0;
+    workingDays = 0;
 }
 
-ProductionWorker::ProductionWorker(string name, int id, string date, int shift, double hourlyPayRate) : Employee(name, id, date)
+ProductionWorker::ProductionWorker(string name, int id, string date, int shift, double hourlyPayRate, int workingDays) : Employee(name, id, date)
 {
     this->shift = shift;
     this->hourlyPayRate = hourlyPayRate;
+    this->workingDays = workingDays;
+    setSalary();
 }
 
 void ProductionWorker::setShift(int shift)
@@ -19,9 +23,22 @@ void ProductionWorker::setShift(int shift)
     this->shift = shift;
 }
 
+void ProductionWorker::setWorkingDays(int workingDays)
+{
+    this->workingDays = workingDays;
+}
+
 void ProductionWorker::setHourlyPayRate(double hourlyPayRate)
 {
     this->hourlyPayRate = hourlyPayRate;
+}
+
+void ProductionWorker::setSalary()
+{
+    if (shift == 1)
+        salary = workingDays * hourlyPayRate;
+    else if (shift == 2)
+        salary = workingDays * (hourlyPayRate + (hourlyPayRate * 0.5));
 }
 
 int ProductionWorker::getShift() const
@@ -44,4 +61,6 @@ void ProductionWorker::print()
         cout << "night";
     cout << endl;
     cout << "Hourly pay rate: " << hourlyPayRate << endl;
+    cout << "Working days: " << workingDays << endl;
+    cout << "Salary: " << salary << endl;
 }

@@ -2,13 +2,13 @@
 #include "sinhvien.h"
 using namespace std;
 
-sinhvien::sinhvien() : connguoi()
+sinhvien::sinhvien() : hocsinh()
 {
     chuyenNganh = "";
     msv = "";
 }
 
-sinhvien::sinhvien(string ht, int t, string cn, string msv) : connguoi(ht, t)
+sinhvien::sinhvien(string ht, int t, string truong, string lop, string sdt, string cn, string msv) : hocsinh(ht, t, truong, lop, sdt)
 {
     this->chuyenNganh = cn;
     this->msv = msv;
@@ -36,7 +36,7 @@ string sinhvien::getMsv() const
 
 void sinhvien::in()
 {
-    connguoi::in();
+    hocsinh::in();
     cout << "Chuyen nganh: " << chuyenNganh << endl;
     cout << "Ma so: " << msv << endl;
 }

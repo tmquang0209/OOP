@@ -11,7 +11,7 @@ int main()
     e1.print();
     cout << endl;
 
-    ProductionWorker p1("Nguyen Van B", 2, "02/02/2020", 1, 100);
+    ProductionWorker p1("Nguyen Van B", 2, "02/02/2020", 1, 5, 26);
     p1.print();
 
     return 0;
