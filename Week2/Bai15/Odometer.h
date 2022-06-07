@@ -23,6 +23,7 @@ public:
     Odometer(int, int);
     void setOdometer(int);
     void setFuelGauge(int);
+    void refuel();
     int getOdometer();
     int getFuelGauge();
     Odometer operator++();

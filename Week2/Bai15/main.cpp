@@ -8,9 +8,16 @@ using namespace std;
 
 int main()
 {
-    Odometer odometer(999990, 15);
+    Odometer odometer(999990, 13);
+    if (odometer.getFuelGauge() < 15)
+        for (int i = 0; i <= 15 - odometer.getFuelGauge(); i++)
+        {
+            odometer.refuel();
+            cout << "Gallon hien tai: " << odometer.getFuelGauge() << endl;
+        }
     cout << "Gallon hien tai:" << odometer.getFuelGauge() << endl;
-    for (int i = 1; i <= 15 * 24; i++)
+    int gallon = odometer.getFuelGauge();
+    for (int i = 1; i <= gallon * 24; i++)
     {
         odometer++;
         if (i % 24 == 0)

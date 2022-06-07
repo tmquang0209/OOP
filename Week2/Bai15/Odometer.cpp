@@ -25,6 +25,11 @@ void Odometer::setFuelGauge(int fuel)
     this->fuelGauge.setFuel(fuel);
 }
 
+void Odometer::refuel()
+{
+    ++fuelGauge;
+}
+
 int Odometer::getOdometer()
 {
     return odometer;
@@ -50,6 +55,7 @@ Odometer Odometer::operator++()
 
 Odometer Odometer::operator++(int)
 {
+    Odometer temp = *this;
     if (odometer < 999999)
     {
         odometer++;
@@ -58,5 +64,5 @@ Odometer Odometer::operator++(int)
     {
         odometer = 0;
     }
-    return *this;
+    return temp;
 }
