@@ -11,7 +11,8 @@ private:
 
 public:
     hocsinh();
-    hocsinh(string ht, int t, string truong, string lop, string sdt);
+    hocsinh(string ht, string ns, string qq,
+            string truong, string lop, string sdt);
     void setTruong(string);
     void setLop(string);
     void setSoDienThoai(string);

@@ -10,7 +10,9 @@ private:
 
 public:
     sinhvien();
-    sinhvien(string ht, int t, string truong, string lop, string sdt, string cn, string msv);
+    sinhvien(string ht, string ns, string qq,
+             string truong, string lop, string sdt,
+             string cn, string msv);
     void setChuyenNganh(string);
     void setMsv(string);
     string getChuyenNganh() const;

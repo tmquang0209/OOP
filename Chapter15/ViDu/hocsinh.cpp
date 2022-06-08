@@ -9,7 +9,9 @@ hocsinh::hocsinh() : connguoi()
     soDienThoai = "";
 }
 
-hocsinh::hocsinh(string ht, int t, string truong, string lop, string sdt) : connguoi(ht, t)
+hocsinh::hocsinh(string ht, string ns, string qq,
+                 string truong, string lop, string sdt)
+    : connguoi(ht, ns, qq)
 {
     this->truong = truong;
     this->lop = lop;

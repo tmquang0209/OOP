@@ -1,23 +1,28 @@
+#include "Date.h"
 #ifndef CONNGUOI_H
 #define CONNGUOI_H
 #include <string>
-
 using namespace std;
 
 class connguoi
 {
 private:
     string hoten;
-    int tuoi;
+    Date ngaySinh;
+    string queQuan;
 
 public:
     connguoi();
-    connguoi(string ht, int t);
+    connguoi(string ht, string ns, string qq);
 
     void setHoten(string ht);
-    void setTuoi(int t);
+    void setNgaySinh(string ns);
+    void setQueQuan(string qq);
+
     string getHoten() const;
-    int getTuoi() const;
+    string getNgaySinh() const;
+    string getQueQuan() const;
+
     void in();
 };
 

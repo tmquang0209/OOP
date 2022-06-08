@@ -8,7 +8,10 @@ sinhvien::sinhvien() : hocsinh()
     msv = "";
 }
 
-sinhvien::sinhvien(string ht, int t, string truong, string lop, string sdt, string cn, string msv) : hocsinh(ht, t, truong, lop, sdt)
+sinhvien::sinhvien(string ht, string ns,
+                   string qq, string truong, string lop,
+                   string sdt, string cn, string msv)
+    : hocsinh(ht, ns, qq, truong, lop, sdt)
 {
     this->chuyenNganh = cn;
     this->msv = msv;
