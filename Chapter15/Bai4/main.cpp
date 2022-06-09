@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Time.h"
-#include "Time.cpp"
 #include "MilTime.h"
 #include "MilTime.cpp"
 
