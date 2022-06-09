@@ -18,25 +18,6 @@ void TimeClock::setTime(int h, int m, int s)
 void TimeClock::elapsedTime(TimeClock t1, TimeClock t2)
 {
     int hour, minute, sec;
-    // if (t1.getHour() + 1 == t2.getHour())
-    // {
-    //     minute = 60 - t1.getMinute() + t2.getMinute();
-    //     if (t1.getSec() != t2.getSec())
-    //     {
-    //         sec = 60 - t1.getSec() + t2.getSec();
-    //         minute--;
-    //     }
-    //     else
-    //         sec = 0;
-
-    //     if (minute >= 60)
-    //     {
-    //         hour = minute / 60;
-    //         minute = minute % 60;
-    //     }
-    // }
-    // else
-    // {
     hour = t2.getHour() - t1.getHour() - 1;
     minute = 60 - t1.getMinute() + t2.getMinute();
     if (t1.getSec() != t2.getSec())
@@ -63,7 +44,6 @@ void TimeClock::elapsedTime(TimeClock t1, TimeClock t2)
         hour += minute / 60;
         minute = minute % 60;
     }
-    // }
     cout << t1 << " den " << t2 << " = " << hour << ":" << minute << ":" << sec << endl;
 }
 
