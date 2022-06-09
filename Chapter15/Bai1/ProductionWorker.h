@@ -11,7 +11,7 @@ private:
 
 public:
     ProductionWorker();
-    ProductionWorker(string name, int id, string date, int shift, double hourlyPayRate, int workingDays);
+    ProductionWorker(string name, int id, Date date, int shift, double hourlyPayRate, int workingDays);
     void setShift(int shift);
     void setWorkingDays(int workingDays);
     void setSalary();

@@ -10,7 +10,7 @@ ProductionWorker::ProductionWorker() : Employee()
     workingDays = 0;
 }
 
-ProductionWorker::ProductionWorker(string name, int id, string date, int shift, double hourlyPayRate, int workingDays) : Employee(name, id, date)
+ProductionWorker::ProductionWorker(string name, int id, Date date, int shift, double hourlyPayRate, int workingDays) : Employee(name, id, date)
 {
     this->shift = shift;
     this->hourlyPayRate = hourlyPayRate;

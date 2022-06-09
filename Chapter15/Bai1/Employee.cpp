@@ -8,10 +8,10 @@ Employee::Employee()
 {
     name = "";
     id = 0;
-    date = "";
+    date.setDate(0, 0, 0);
 }
 
-Employee::Employee(string name, int id, string date)
+Employee::Employee(string name, int id, Date date)
 {
     this->name = name;
     this->id = id;
@@ -23,7 +23,7 @@ void Employee::setName(string name)
     this->name = name;
 }
 
-void Employee::setDate(string date)
+void Employee::setDate(Date date)
 {
     this->date = date;
 }
@@ -43,7 +43,7 @@ int Employee::getId() const
     return id;
 }
 
-string Employee::getDate() const
+Date Employee::getDate() const
 {
     return date;
 }
