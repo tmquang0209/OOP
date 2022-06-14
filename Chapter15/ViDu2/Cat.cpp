@@ -8,8 +8,12 @@ Cat::Cat() : Pet()
     featherLength = "";
 }
 
-Cat::Cat(string name, string habitat, string featherLength) : Pet(name, habitat)
+Cat::Cat(string name, string habitat, string featherLength)
 {
+    if (habitat == "Water")
+        Pet::setInfor(name, "");
+    else
+        Pet::setInfor(name, habitat);
     this->featherLength = featherLength;
 }
 
