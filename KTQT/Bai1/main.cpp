@@ -6,9 +6,11 @@ using namespace std;
 
 int main()
 {
-    ThoiGian time1(10, 50, 51), time2(11, 12, 13), time3;
+    // 12:40:6 + 15:30:10 = 28:10:16
+    ThoiGian time1(12, 40, 6), time2(15, 30, 10), time3;
     time3 = time1 + time2;
     time3.print();
-    time3.printCount();
+    // time3.printCount();
+    ThoiGian::printCount();
     return 0;
 }

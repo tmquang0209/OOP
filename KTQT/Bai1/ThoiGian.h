@@ -14,7 +14,7 @@ public:
     ThoiGian();
     ThoiGian(int, int, int);
     void print();
-    void printCount();
+    static void printCount();
     ThoiGian operator+(const ThoiGian);
 };
 #endif
