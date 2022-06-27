@@ -164,10 +164,10 @@ void displayMenu()
 
 double calcTax(double salary)
 {
-    if (salary <= 11)
+    if (salary <= 11000)
         return salary;
     else
-        return salary - (salary - 11) * 0.1;
+        return salary - (salary - 11000) * 0.1;
 }
 
 void sort(Employee *employee[], int size)
