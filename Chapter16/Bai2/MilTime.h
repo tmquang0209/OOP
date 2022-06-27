@@ -13,12 +13,6 @@ private:
     int type; // type = 1: am , type = 2: pm
 
 public:
-    class BadHour
-    {
-    };
-    class BadSecond
-    {
-    };
     MilTime();
     MilTime(int h, int m, int s);
     void setTime(int hour, int minute, int sec);

@@ -7,10 +7,18 @@ using namespace std;
 
 int main()
 {
-    Time t1(10, 12, 13);
-    MilTime m1(14, 15, 16), m2;
-    cout << m1;
-    cin >> m2;
-    cout << m2;
+    try
+    {
+        MilTime t1(10, 10, 50);
+        cout << t1;
+    }
+    catch (MilTime::BadHour)
+    {
+        cout << "Error hour" << endl;
+    }
+    catch (MilTime::BadSecond)
+    {
+        cout << "Error second" << endl;
+    }
     return 0;
 }

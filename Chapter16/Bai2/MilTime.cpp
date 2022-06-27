@@ -15,21 +15,10 @@ MilTime::MilTime(int h, int m, int s) : Time(h, m, s)
 
 void MilTime::setTime(int hour, int minute, int sec)
 {
-    if (hour < 0 || hour > 2359)
-    {
-        throw BadHour();
-    }
-    else if (sec < 0 || sec > 59)
-    {
-        throw BadSecond();
-    }
-    else
-    {
-        milHour = (hour > 12) ? hour % 12 : hour;
-        milMinute = minute;
-        milSec = sec;
-        type = (hour > 12) ? 2 : 1;
-    }
+    milHour = (hour > 12) ? hour % 12 : hour;
+    milMinute = minute;
+    milSec = sec;
+    type = (hour > 12) ? 2 : 1;
 }
 
 int MilTime::getMilHour() const
