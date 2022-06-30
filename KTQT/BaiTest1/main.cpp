@@ -63,7 +63,7 @@ void readFile(fstream &fileData, Employee *employee[])
             fileData >> turnover;
             fileData >> discount;
             fileData >> basicSalary;
-            employee[i] = new SpecialCommissionStaff(employeeID, name, stoi(taxCode), basicSalary, turnover, discount);
+            employee[i] = new SpecialCommissionStaff(employeeID, name, stoi(taxCode), turnover, discount, basicSalary);
         }
         i++;
     }
