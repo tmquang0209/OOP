@@ -92,6 +92,7 @@ int main()
     print(mv1);
     print(mv2);
     cout << endl;
+    
     // doc file dat
     fileDat.open("Movie.dat", ios::in | ios::binary);
     if (!fileDat)

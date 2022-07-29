@@ -10,6 +10,7 @@ private:
     string benB;
     float soTien;
     static int count;
+    friend HoaDon max1(HoaDon, HoaDon);
 
 public:
     HoaDon();

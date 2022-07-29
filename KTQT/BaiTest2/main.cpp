@@ -7,12 +7,13 @@
 #include "HoaDonDien.cpp"
 using namespace std;
 
-// HoaDon max1(HoaDon hd1, HoaDon hd2)
-// {
-//     if (hd1.soTien > hd2.soTien)
-//         return hd1;
-//     return hd2;
-// }
+HoaDon max1(HoaDon hd1, HoaDon hd2)
+{
+    if (hd1.soTien > hd2.soTien)
+        return hd1;
+    return hd2;
+}
+
 template <class T>
 T max2(T &hd1, T &hd2)
 {
@@ -78,7 +79,13 @@ int main()
 
     HoaDon hd1("Mua rau", "Quang 1", "Zang 1", 100);
     HoaDon hd2("Tien dien", "Quang 2", "Zang 2", 200);
+    
+    cout << "MAX1" << endl;
+    cout << "Hoa don lon nhat: " << endl;
+    HoaDon hd3 = max1(hd1, hd2);
+    cout << hd3 << endl;
 
+    cout << "Max2" << endl;
     if (max2(hd1, hd2) == hd1)
     {
         cout << "Hoa don 1 lon hon hoa don 2" << endl;
